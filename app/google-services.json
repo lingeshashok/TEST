@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "613264601669",
+    "firebase_url": "https://intelwhitelabelapp.firebaseio.com",
+    "project_id": "intelwhitelabelapp",
+    "storage_bucket": "intelwhitelabelapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613264601669:android:fcfa9ad50f81d5b8",
+        "android_client_info": {
+          "package_name": "com.rattletech.intel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613264601669-8a4jsm6g651ai6g8cg380emr6u26l9pj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rattletech.intel",
+            "certificate_hash": "4581aea4900af368df2d2e094910db3be965f473"
+          }
+        },
+        {
+          "client_id": "613264601669-ekku0kg2v41h97c4deqmaelgj180cgqk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rattletech.intel",
+            "certificate_hash": "0ca5cd0be85f47d0294392fda811bb752b0402bd"
+          }
+        },
+        {
+          "client_id": "613264601669-0i0mhmgvjairhfkdu6185lqf2j7s82pb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdRxWBa_2JmPiyKhtWwyoVJoDVsey0dPE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613264601669-0i0mhmgvjairhfkdu6185lqf2j7s82pb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

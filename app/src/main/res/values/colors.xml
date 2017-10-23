@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#0E67A2</color>
+    <color name="colorPrimaryDark">#0E67A2</color>
+    <color name="colorAccent">#0E67A2</color>
+    <color name="colorButton">#c7c7c7</color>
+
+    <color name="black_overlay">#000000</color>
+    <color name="white">#fff</color>
+    <color name="yellow">#e6bd01</color>
+    <color name="green">#8eb740</color>
+    <color name="red">#b74040</color>
+    <color name="grey">#c7c7c7</color>
+    <color name="grey_title_background">#e2e2e2</color>
+    <color name="selected_property_color">#77B0DB</color>
+
+
+    <color name="colorControlHighlight">@color/fifty_percent_transparency_grey_400</color>
+    <color name="fifty_percent_transparency_grey_400">#80bdbdbd</color>
+    <color name="color_white">#fff</color>
+    <color name="grey_500">#479e9e9e</color>
+    <color name="grey_700">#616161</color>
+
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#55c50031</color>
+    <color name="dot_dark_screen2">#55c52400</color>
+
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#fff</color>
+    <color name="dot_light_screen2">#fff</color>
+
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+
+    </array>
+
+
 </resources>

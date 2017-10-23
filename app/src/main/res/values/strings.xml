@@ -1,3 +1,178 @@
 <resources>
-    <string name="app_name">" CityOfOntario"</string>
+    <string name="app_name">CityOfOntario</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="title_activity_signin">SignInActivity</string>
+    <string name="title_activity_signup">SignUpActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="str_shdapok">shdapOk</string>
+    <string name="str_timed_out">shdapOk</string>
+
+    <string name="basic_action_1">Unpair Device</string>
+    <string name="basic_action_2">Delete Group</string>
+    <string name="basic_action_3">Delete Dev</string>
+    <string name="basic_del">Delete</string>
+    <string name="str_orange">#fe7b27</string>
+    <string name="str_green">#3cac69</string>
+    <string name="str_red">#FF4444</string>
+    <string name="str_yellow">#FFBB33</string>
+    <string name="str_sky_blue">#33B5E5</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_colo_picker">Choose color</string>
+    <string name="menu_rooms">Groups</string>
+    <string name="menu_rule">Rules</string>
+    <string name="tbd">Rules</string>
+    <string name="menu_paired_devices">Paired Devices</string>
+    <string name="str_please_wait">Please wait.</string>
+    <string name="str_loading_please_wait">Loading...</string>
+    <string name="str_shdap_gateway">SHDAP_GATEWAY</string>
+    <string name="str_loggin_please_wait">Logging in. Please wait.</string>
+    <string name="str_result">result</string>
+    <string name="str_test_shdap">INTEL_SHDAP</string>
+
+    <string name="str_baterry_level">Battery Level</string>
+    <string name="str_door_status">Door Status</string>
+    <string name="str_humidity_level">Humidity Level</string>
+    <string name="str_temparature_level">Temparature Level</string>
+    <string name="str_motion_detection">Motion Detection</string>
+    <string name="str_luminance">Luminance</string>
+    <string name="str_add_group">Add Group</string>
+    <string name="str_group_name">Group Name</string>
+    <string name="str_group">Group</string>
+    <string name="str_group_icon">Group Icon</string>
+    <string name="str_group_settings">Group Settings</string>
+    <string name="str_device_settings">Device Settings</string>
+    <string name="str_group_list">Group List</string>
+    <string name="str_group_delete">Delete Group</string>
+    <string name="str_group_update">Update Group</string>
+    <string name="str_device_update">Update Device</string>
+    <string name="str_alias_name">Alias Name</string>
+    <string name="str_zone">Zone</string>
+    <string name="str_unpair_device">Unpair Device</string>
+    <string name="str_manufature_name">Manufacture Name</string>
+    <string name="str_serial_number">Serial Number</string>
+    <string name="str_rename">Rename</string>
+    <string name="str_GROUPS">GROUPS</string>
+
+    <string name="str_switch">switch</string>
+    <string name="str_slider">slider</string>
+    <string name="str_label">label</string>
+    <string name="str_stepper">stepper</string>
+
+    <string name="str_edit">Edit</string>
+    <string name="str_select">Select</string>
+
+    <string name="str_color">color</string>
+    <string name="str_choose_color">Choose Color</string>
+    <string name="str_add_device_intent">addDevice</string>
+
+    <string name="toast_invalidtype">\'%s\' is not a valid Bonjour type!</string>
+    <string name="format_host_address_v4">%1$s:%2$s</string>
+    <string name="format_host_address_v6">%1$s:%2$s</string>
+    <string name="tv_notxtrecords">No TXT records resolved</string>
+
+    <string name="str_please_enter_group_name">Please enter group name</string>
+    <string name="str_please_enter_valid_email">Please enter valid email</string>
+    <string name="str_please_enter_email">Enter Your Email Address</string>
+    <string name="str_please_enter_required">Please Enter User Credentials</string>
+    <string name="str_email_password_does_not_match">Username or Password does not match</string>
+
+
+    <string name="facebook_app_id">625947350948691</string>
+
+    <string-array name="str_array_hue_bulb_property">
+        <item>value</item>
+        <item>brightness</item>
+        <item>hue</item>
+    </string-array>
+
+    <string-array name="str_array_door_sensor_property">
+        <item>Battery level</item>
+        <item>Door Status</item>
+    </string-array>
+
+    <string-array name="str_array_multi_sensor_property">
+        <item>Humidity Level</item>
+        <item>Temperature</item>
+        <item>Motion Detection</item>
+        <item>Luminance</item>
+    </string-array>
+
+    <string name="no_device_found">No Devices Found</string>
+    <string name="no_group_found">No Groups Found</string>
+    <string name="no_rules_found">No Rules Found</string>
+    <string name="no_device">No Devices Found</string>
+    <string name="str_paired_device">Paired Devices</string>
+    <string name="str_connect_to_wifi">Conncet to WiFi</string>
+    <string name="str_connect">Connect</string>
+    <string name="str_cancel">Cancel</string>
+    <string name="str_register">Register</string>
+    <string name="str_singn_in">Sign In</string>
+    <string name="str_add_Device">Add Device</string>
+    <string name="str_first_name">First Name</string>
+    <string name="str_last_name">Last Name</string>
+    <string name="str_email">Email</string>
+    <string name="str_phone_number">Phone Number</string>
+    <string name="str_password">Password</string>
+    <string name="str_confirm_password">Confirm Password</string>
+    <string name="str_service_name">SERVICE_NAME</string>
+    <string name="str_service_host_ip">SERVICE_HOSTIP</string>
+    <string name="str_service_port">SERVICE_HOSTPORT</string>
+    <string name="str_service_host_name">SERVICE_HOSTName</string>
+    <string name="str_mac_id">SERVICE_MACID</string>
+    <string name="str_device_properties">Device Properties</string>
+    <string name="str_auto_refresh">Auto Refresh</string>
+    <string name="group_devices_title">Group Devices</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">PREV</string>
+    <string name="start">GOT IT</string>
+
+    <string name="wify_alert_dialog_title">Access Needed</string>
+    <string name="wify_alert_dialog_message">Go to Settings page and select INTEL_SHDAP as Wi-Fi netowrk to set up Cybertan with your Home Network</string>
+
+
+    <string name="guide_text">You will now be guided to onboarding your SHDAP gateway. Please follow the instructions below to begin using the SHDAP solution.</string>
+    <string name="line11">1) Power on the SHDAP gateway. When this is done for the first time your gateway will start in pairing mode.</string>
+    <string name="line1">1) Go to your mobile phone --> Settings --> Wi-Fi.</string>
+    <string name="option1">Option 1 : Connect gateway via Wi-Fi</string>
+    <string name="option2">Option 2 : Connect gateway via ETHERNET</string>
+    <string name="line2">2. Choose test_SHDAP access point and Connect to it.</string>
+    <string name="line3">3. When you are connected to test_SHDAP wifi access point, please come back to this app to be guided on configuring the gateway to connect to your home network.</string>
+    <string name="line4">1. Plug In your LAN cable to gateway and please come back to this app to be guided on configuring the gateway.</string>
+    <string name="already_connected_to_gateway"><u>Click here if already connected to gateway</u></string>
+    <string name="connect_gateway"><u>Click here if connecting to gateway for first time</u></string>
+
+
+    <string name="slide_1_title">Plug in your Gateway</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+    <string name="gateway_found">Connected to SHDAP Gateway</string>
+    <string name="searching_gateway">Searching for Gateway.</string>
+    <string name="connected_result_text">Click the above button to proceed with the gateway</string>
+    <string name="search_again">Click the above button to search nearby Gateway again</string>
+    <string name="title_activity_multi_device">MultiDeviceActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gateway_timeout_error">No Response from Gateway.</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="bks_password">IntelShd@p!123</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="socket_factory_key">intel</string>
+    <string name="title_activity_add_rules">AddRulesActivity</string>
+    <string name="str">Intel123</string>
+    <string name="greater"><![CDATA[>]]></string>
+    <string name="lesser"><![CDATA[<]]></string>
+    <string name="between"><![CDATA[</>]]></string>
+    <!--<string name="bks_password">1234</string>-->
+
+
 </resources>

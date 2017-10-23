@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/nav_devices_icon"
+        android:title="Paired Devices"/>
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/my_tab_icon"
+        android:title="@string/menu_rooms"/>
+    <item
+        android:id="@+id/rule_management"
+        android:icon="@drawable/rule_management_icon"
+        android:title="@string/tbd"/>
+
+<!--    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_notifications"/>-->
+
+</menu>

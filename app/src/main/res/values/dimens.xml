@@ -1,0 +1,45 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="card_corner_radius">2dp</dimen>
+    <dimen name="card_elevation">0dp</dimen>
+    <dimen name="txt_title">18dp</dimen>
+    <dimen name="txt_list_item">18dp</dimen>
+    <dimen name="txt_normal">15dp</dimen>
+    <dimen name="layout_margin">10dp</dimen>
+    <dimen name="small_margin">5dp</dimen>
+    <dimen name="small_margin_listview">2dp</dimen>
+    <dimen name="big_margin">15dp</dimen>
+    <dimen name="button_margin_value">20dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="detail_screen_margin">10dp</dimen>
+    <dimen name="switch_layout_height">70dp</dimen>
+
+    <dimen name="tool_bar_title">20dp</dimen>
+
+
+    <dimen name="screen_heading_text_size">18dp</dimen>
+
+    <dimen name="screen_text_size">16dp</dimen>
+    <dimen name="screen_text_size_programatically">10dp</dimen>
+    <dimen name="switch_icon__width_programatically">50dp</dimen>
+    <dimen name="switch_icon_height_programatically">30dp</dimen>
+
+
+    <dimen name="settings_page_left_layer_text_size">21dp</dimen>
+    <dimen name="settings_page_right_layer_text_size">20dp</dimen>
+    <dimen name="connectGateWayText">23dp</dimen>
+    <dimen name="intel_text_size">27dp</dimen>
+    <dimen name="button_text_size">20dp</dimen>
+    <dimen name="model_number_text_size">14dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">110dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_desc">18dp</dimen>
+    <dimen name="desc_padding">10dp</dimen>
+
+</resources>

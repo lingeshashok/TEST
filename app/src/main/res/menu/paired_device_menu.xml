@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+ <!--<item
+        android:id="@+id/action_refresh_disable"
+        android:title="Clear"
+        android:icon="@drawable/nav_auto_refresh_disable"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_refresh_enable"
+        android:title="Clear"
+        android:icon="@drawable/nav_refresh_icon_enabled"
+        app:showAsAction="always"
+        android:visible="false"/>-->
+    <item
+        android:id="@+id/nearfield"
+        android:title="Clear"
+        android:icon="@drawable/add"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_profile"
+        android:title="Clear"
+        android:icon="@drawable/user_actionbar_icon1"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+
+</menu>

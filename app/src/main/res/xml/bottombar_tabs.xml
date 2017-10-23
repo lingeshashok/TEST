@@ -1,17 +1,16 @@
 <tabs>
     <tab
         id="@+id/tab_favorites"
-        icon="@drawable/nav_devices_icon"
+        icon="@drawable/my_tab_icon"
         title="Favorites"
        />
     <tab
         id="@+id/tab_nearby"
         icon="@drawable/my_tab_icon"
         title="Nearby"
-
         />
     <tab
         id="@+id/tab_friends"
-        icon="@drawable/rule_management_icon"
+        icon="@drawable/my_tab_icon"
         title="Friends" />
 </tabs>

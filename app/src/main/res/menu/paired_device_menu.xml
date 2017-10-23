@@ -21,7 +21,7 @@
     <item
         android:id="@+id/action_profile"
         android:title="Clear"
-        android:icon="@drawable/user_actionbar_icon1"
+        android:icon="@drawable/add"
         app:showAsAction="always"
         android:visible="false"/>
 

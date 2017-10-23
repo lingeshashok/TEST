@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
-
+        bottomNavigationView.setItemIconTintList(null);
         Menu m = bottomNavigationView.getMenu();
         for (int i=0;i<m.size();i++) {
             MenuItem mi = m.getItem(i);
@@ -206,6 +206,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 AppConstants.B_NAV_INDEX = 0;
                 CURRENT_TAG = TAG_PAIRED_DEVICES;
                 signOutImageview.setVisibility(View.VISIBLE);
+
+
+
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
                 if (!fragment1Init) {

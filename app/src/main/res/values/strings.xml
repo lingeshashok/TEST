@@ -16,7 +16,6 @@
     <string name="str_paired_device">Paired Devices</string>
 
 
-
     <string name="home">Home</string>
 
     <!--<string name="bks_password">1234</string>-->
@@ -25,4 +24,5 @@
         <item>Category</item>
         <item>Category</item>
     </string-array>
+    <string name="title_activity_report_issue">ReportIssueActivity</string>
 </resources>

@@ -13,16 +13,17 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
 
+        android:background="#EBEBF1"
         android:minHeight="?attr/actionBarSize"
         app:contentInsetLeft="10dp"
         app:contentInsetStart="10dp"
         app:contentInsetStartWithNavigation="10dp"
-        app:titleTextColor="@android:color/black"
-        android:background="#EBEBF1">
+        app:titleTextColor="@android:color/black">
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -36,24 +37,26 @@
                     android:scaleType="fitCenter"
                     android:visibility="visible" />
             </RelativeLayout>
+
             <ImageView
                 android:id="@+id/profile_imageview"
                 android:layout_width="140dp"
                 android:layout_height="58dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="30dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/app_logo"
-                android:visibility="visible"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                android:visibility="visible" />
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="6dp">
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="6dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/logout_imageview1"
@@ -69,28 +72,29 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#AAAAAA"
-        />
+        android:background="#AAAAAA" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <FrameLayout
             android:id="@+id/content"
-            android:layout_above="@+id/navigation"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </FrameLayout>
+            android:layout_height="match_parent"
+            android:layout_above="@+id/navigation"></FrameLayout>
+
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation"
-            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
             android:background="?android:attr/windowBackground"
-            app:menu="@menu/navigation"
-            app:itemTextColor="@drawable/bottom_nav_title_color"
-            app:itemIconTint="@color/white"
             app:itemBackground="@color/colorPrimary"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@drawable/bottom_nav_title_color"
+            app:menu="@menu/navigation"
 
             />
     </RelativeLayout>

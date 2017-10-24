@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="bottom-bar-2.3.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/223aa051e25822cf47bf78078b051506a9ac9daa/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/223aa051e25822cf47bf78078b051506a9ac9daa/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/757b9e04ef229362cf947feaa36da5df6594fd5a/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/757b9e04ef229362cf947feaa36da5df6594fd5a/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

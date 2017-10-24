@@ -33,10 +33,6 @@ public class PairedDevicesFragment extends Fragment {
         return view;
     }
 
-
-
-
-
     @Override
     public void onResume() {
         super.onResume();
@@ -47,7 +43,6 @@ public class PairedDevicesFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-
     }
 
     @Override

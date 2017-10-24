@@ -5,11 +5,12 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -24,17 +25,13 @@ import android.widget.TextView;
 
 import com.rattletech.cityofontario.config.ApiServiceConstants;
 import com.rattletech.cityofontario.config.AppConstants;
-import com.rattletech.cityofontario.fragments.RulesManagementFragment;
-import com.rattletech.cityofontario.utilities.AppPreferences;
+import com.rattletech.cityofontario.fragments.CalenderFragment;
 import com.rattletech.cityofontario.fragments.PairedDevicesFragment;
-import com.rattletech.cityofontario.fragments.PairedHomesFragment;
+import com.rattletech.cityofontario.fragments.RulesManagementFragment;
 import com.rattletech.cityofontario.interfaces.CustomModelInterface;
-
-
-
+import com.rattletech.cityofontario.utilities.AppPreferences;
 
 import java.util.Timer;
-
 
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, CustomModelInterface.OnCustomStateListener {
@@ -47,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private Handler mHandler;
 
 
-    String  timeOut = "55";
+    String timeOut = "55";
     public static final int profileResponseCode = 15;
     public static final int deviceDetailsResponseCode = 25;
 
@@ -83,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     boolean fragment3Init = false;
 
     Fragment fragmenttest1 = new PairedDevicesFragment();
-    Fragment fragmenttest2 = new PairedHomesFragment();
+    Fragment fragmenttest2 = new CalenderFragment();
     Fragment fragmenttest3 = new RulesManagementFragment();
 
     Fragment currentFragmentState;
@@ -113,31 +110,60 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setItemIconTintList(null);
         Menu m = bottomNavigationView.getMenu();
-        for (int i=0;i<m.size();i++) {
+        for (int i = 0; i < m.size(); i++) {
             MenuItem mi = m.getItem(i);
-            AppConstants.applyFontToMenuItem(mi,MainActivity.this);
+            AppConstants.applyFontToMenuItem(mi, MainActivity.this);
+
+        }
+
+//<<<<<<< Updated upstream
+//           navItemIndex = 0;
+//           AppConstants.B_NAV_INDEX = 0;
+//           CURRENT_TAG = TAG_PAIRED_DEVICES;
+//           signOutImageview.setVisibility(View.VISIBLE);
+//           FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//
+//           if (!fragment1Init) {
+//               fragmentTransaction.add(R.id.content, fragmenttest1, CURRENT_TAG);
+//               fragmentTransaction.commit();
+//               fragment1Init = true;
+//           }else{
+//               fragmentTransaction.hide(currentFragmentState);
+//               fragmentTransaction.show(fragmenttest1);
+//               fragmentTransaction.commit();
+//           }
+//           currentFragmentState = fragmenttest1;
+//           addDevice = false;
+//           invalidateOptionsMenu();
+//
+//=======
+        BottomNavigationMenuView menuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
+        for (int i = 0; i < menuView.getChildCount(); i++) {
+            BottomNavigationItemView itemView = (BottomNavigationItemView) menuView.getChildAt(i);
+            itemView.setShiftingMode(false);
+            itemView.setChecked(false);
         }
 
 
-           navItemIndex = 0;
-           AppConstants.B_NAV_INDEX = 0;
-           CURRENT_TAG = TAG_PAIRED_DEVICES;
-           signOutImageview.setVisibility(View.VISIBLE);
-           FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
-           if (!fragment1Init) {
-               fragmentTransaction.add(R.id.content, fragmenttest1, CURRENT_TAG);
-               fragmentTransaction.commit();
-               fragment1Init = true;
-           }else{
-               fragmentTransaction.hide(currentFragmentState);
-               fragmentTransaction.show(fragmenttest1);
-               fragmentTransaction.commit();
-           }
-           currentFragmentState = fragmenttest1;
-           addDevice = false;
-           invalidateOptionsMenu();
+        navItemIndex = 0;
+        AppConstants.B_NAV_INDEX = 0;
+        CURRENT_TAG = TAG_PAIRED_DEVICES;
+        signOutImageview.setVisibility(View.VISIBLE);
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
+        if (!fragment1Init) {
+            fragmentTransaction.add(R.id.content, fragmenttest1, CURRENT_TAG);
+            fragmentTransaction.commit();
+            fragment1Init = true;
+        } else {
+            fragmentTransaction.hide(currentFragmentState);
+            fragmentTransaction.show(fragmenttest1);
+            fragmentTransaction.commit();
+        }
+        currentFragmentState = fragmenttest1;
+        addDevice = false;
+        invalidateOptionsMenu();
 
 
         boolean tabletSize = getResources().getBoolean(R.bool.isTablet);
@@ -152,15 +178,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         CustomModelInterface.getInstance().setListener(this);
 
-      signOutImageview.setOnClickListener(new View.OnClickListener() {
+        signOutImageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(KEY_TO_RELOAD_LIST_DEVICE);
-                i.putExtra("key","refresh");
+                i.putExtra("key", "refresh");
                 sendBroadcast(i);
             }
         });
     }
+
     @Override
     public void onPause() {
         super.onPause();
@@ -187,13 +214,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         @StringRes int text;
         switch (item.getItemId()) {
 
-            case R.id.navigation_home:
-
+            case R.id.nav_home:
                 navItemIndex = 0;
                 AppConstants.B_NAV_INDEX = 0;
                 CURRENT_TAG = TAG_PAIRED_DEVICES;
                 signOutImageview.setVisibility(View.VISIBLE);
-
 
 
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -203,7 +228,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     fragmentTransaction.add(R.id.content, fragmenttest1, CURRENT_TAG);
                     fragmentTransaction.commit();
                     fragment1Init = true;
-                }else{
+                } else {
                     fragmentTransaction.hide(currentFragmentState);
                     fragmentTransaction.show(fragmenttest1);
                     fragmentTransaction.commit();
@@ -213,7 +238,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 invalidateOptionsMenu();
 
                 break;
-            case R.id.navigation_dashboard:
+            case R.id.nav_calender:
 
                 navItemIndex = 1;
                 AppConstants.B_NAV_INDEX = 1;
@@ -226,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     fragmentTransaction1.add(R.id.content, fragmenttest2, CURRENT_TAG);
                     fragmentTransaction1.commit();
                     fragment2Init = true;
-                }else{
+                } else {
                     fragmentTransaction1.hide(currentFragmentState);
                     fragmentTransaction1.show(fragmenttest2);
                     fragmentTransaction1.commit();
@@ -234,9 +259,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 currentFragmentState = fragmenttest2;
                 invalidateOptionsMenu();
                 break;
-           case R.id.rule_management:
+            case R.id.nav_my_city:
 
-               navItemIndex = 2;
+                navItemIndex = 2;
                 AppConstants.B_NAV_INDEX = 2;
                 CURRENT_TAG = TAG_RULES;
                 signOutImageview.setVisibility(View.INVISIBLE);
@@ -247,7 +272,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     fragmentTransaction2.add(R.id.content, fragmenttest3, CURRENT_TAG);
                     fragmentTransaction2.commit();
                     fragment3Init = true;
-                }else{
+                } else {
                     fragmentTransaction2.hide(currentFragmentState);
                     fragmentTransaction2.show(fragmenttest3);
                     fragmentTransaction2.commit();
@@ -255,7 +280,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 currentFragmentState = fragmenttest3;
                 invalidateOptionsMenu();
 
-                 break;
+                break;
 
             default:
                 return false;
@@ -263,7 +288,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         return true;
     }
-
 
 
     private Fragment getHomeFragment() {
@@ -275,9 +299,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
             case 1:
 
-                PairedHomesFragment pairedRoomsFragment = new PairedHomesFragment();
-                return pairedRoomsFragment;
-
+                CalenderFragment calenderFragment = new CalenderFragment();
+                return calenderFragment;
             default:
                 return new PairedDevicesFragment();
         }
@@ -307,7 +330,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onCreateOptionsMenu(Menu menu) {
 
 
-
         return true;
     }
 
@@ -321,12 +343,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             return true;
         }
         if (id == R.id.add) {
-            if(navItemIndex == 1){
+            if (navItemIndex == 1) {
 
             }
 
-            if(navItemIndex == 2){
-
+            if (navItemIndex == 2) {
 
 
             }
@@ -351,6 +372,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             return capitalize(manufacturer) + " " + model;
         }
     }
+
     private String capitalize(String s) {
         if (s == null || s.length() == 0) {
             return "";
@@ -362,9 +384,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             return Character.toUpperCase(first) + s.substring(1);
         }
     }
-
-
-
 
 
     @Override
@@ -382,7 +401,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragmentTransaction.add(R.id.content, fragmenttest1, CURRENT_TAG);
                 fragmentTransaction.commitAllowingStateLoss();
                 fragment1Init = true;
-            }else{
+            } else {
                 fragmentTransaction.hide(currentFragmentState);
                 fragmentTransaction.show(fragmenttest1);
                 fragmentTransaction.commitAllowingStateLoss();
@@ -403,16 +422,16 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragmentTransaction1.add(R.id.content, fragmenttest2, CURRENT_TAG);
                 fragmentTransaction1.commitAllowingStateLoss();
                 fragment2Init = true;
-            }else{
+            } else {
                 fragmentTransaction1.hide(currentFragmentState);
                 fragmentTransaction1.show(fragmenttest2);
                 fragmentTransaction1.commitAllowingStateLoss();
             }
             currentFragmentState = fragmenttest2;
             invalidateOptionsMenu();
-        }else if(modelState.equals("tab_rule")){
+        } else if (modelState.equals("tab_rule")) {
 
-           navItemIndex = 2;
+            navItemIndex = 2;
             AppConstants.B_NAV_INDEX = 2;
             CURRENT_TAG = TAG_RULES;
 
@@ -424,7 +443,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragmentTransaction2.add(R.id.content, fragmenttest3, CURRENT_TAG);
                 fragmentTransaction2.commitAllowingStateLoss();
                 fragment3Init = true;
-            }else{
+            } else {
                 fragmentTransaction2.hide(currentFragmentState);
                 fragmentTransaction2.show(fragmenttest3);
                 fragmentTransaction2.commitAllowingStateLoss();
@@ -435,6 +454,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
         bottomNavigationView.getMenu().getItem(navItemIndex).setChecked(true);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

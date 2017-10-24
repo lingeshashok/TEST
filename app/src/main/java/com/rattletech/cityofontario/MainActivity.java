@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public static String CURRENT_TAG = TAG_PAIRED_DEVICES;
     public static int navItemIndex = 0;
     private Handler mHandler;
-    TextView toolbar_title;
+
 
     String  timeOut = "55";
     public static final int profileResponseCode = 15;
@@ -105,8 +105,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
-        toolbar_title = (TextView) findViewById(R.id.toolbar_title);
-        toolbar_title.setTypeface(typefaceBold);
+
         signOutImageview = (ImageView) findViewById(R.id.logout_imageview);
         timerAutoRefersh = new Timer();
 
@@ -118,18 +117,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             MenuItem mi = m.getItem(i);
             AppConstants.applyFontToMenuItem(mi,MainActivity.this);
         }
-
-
-        Intent intnet = getIntent();
-        addDevice = intnet.getBooleanExtra(getString(R.string.str_add_device_intent), false);
-
-       if (intnet.hasExtra(getString(R.string.menu_rooms))) {
-            openGroup = true;
-            navItemIndex = 1;
-            AppConstants.B_NAV_INDEX = 1;
-            loadHomeFragment();
-            CURRENT_TAG = TAG_ROOMS;
-        } else {
 
 
            navItemIndex = 0;
@@ -151,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
            addDevice = false;
            invalidateOptionsMenu();
 
-        }
+
 
         boolean tabletSize = getResources().getBoolean(R.bool.isTablet);
         if (tabletSize) {
@@ -319,31 +306,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        if (navItemIndex == 0) {
-            if (addDevice)
-                getMenuInflater().inflate(R.menu.paired_rooms_menu, menu);
-            else
-                getMenuInflater().inflate(R.menu.paired_device_menu, menu);
-            toolbar_title.setText(R.string.str_paired_device);
 
-
-
-
-
-        } else if(navItemIndex == 1){
-            getMenuInflater().inflate(R.menu.paired_rooms_menu, menu);
-            toolbar_title.setText(R.string.menu_rooms);
-
-
-
-
-        }else{
-            getMenuInflater().inflate(R.menu.paired_rooms_menu, menu);
-            toolbar_title.setText(R.string.menu_rule);
-
-
-
-        }
 
         return true;
     }
@@ -412,7 +375,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             navItemIndex = 0;
             AppConstants.B_NAV_INDEX = 0;
             CURRENT_TAG = TAG_PAIRED_DEVICES;
-            toolbar_title.setText(getString(R.string.menu_paired_devices));
+
             signOutImageview.setVisibility(View.VISIBLE);
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             if (!fragment1Init) {
@@ -432,7 +395,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             navItemIndex = 1;
             AppConstants.B_NAV_INDEX = 1;
             CURRENT_TAG = TAG_ROOMS;
-            toolbar_title.setText(getString(R.string.menu_rooms));
+
             signOutImageview.setVisibility(View.INVISIBLE);
 
             FragmentTransaction fragmentTransaction1 = getSupportFragmentManager().beginTransaction();

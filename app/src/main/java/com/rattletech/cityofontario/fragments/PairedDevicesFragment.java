@@ -21,12 +21,7 @@ public class PairedDevicesFragment extends Fragment {
 
 
     SwipeRefreshLayout swipeLayout;
-
     LayoutInflater refInflater;
-
-
-
-
 
     @Nullable
     @Override
@@ -34,8 +29,6 @@ public class PairedDevicesFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.paired_device_fragment, container, false);
         refInflater = inflater;
-
-
 
         return view;
     }
@@ -62,11 +55,4 @@ public class PairedDevicesFragment extends Fragment {
         super.onDestroyView();
 
     }
-
-
-
-
-
-
-
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
     android:layout_height="match_parent">
 
     <ImageView
@@ -11,20 +11,51 @@
         android:layout_height="match_parent"
         android:id="@+id/img_pager_item"
         android:scaleType="fitXY"
+        android:background="@drawable/sample_image"
+        android:layout_above="@+id/bottom_layout"
         android:adjustViewBounds="true"
         android:clickable="false"/>
    <LinearLayout
+       android:id="@+id/bottom_layout"
+       android:background="@color/actionbar_background"
+       android:layout_alignParentBottom="true"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-       <TextView
-           android:id="@+id/textView"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <com.rattletech.cityofontario.utilities.TextViewPlus
+           foo:customFont="OpenSans-CondBold.ttf"
+           android:id="@+id/banner_name"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
+           android:layout_marginBottom="5dp"
            android:layout_marginLeft="10dp"
-           android:text="Stay Connected"
+           android:layout_marginTop="5dp"
+           android:text="Ontario Fire Department Open House"
            android:textColor="@color/red"
-          
-           android:textSize="20sp"
-           android:textStyle="bold" />
+           android:textSize="17sp" />
+
+       <com.rattletech.cityofontario.utilities.TextViewPlus
+           foo:customFont="OpenSans-CondBold.ttf"
+            android:id="@+id/banner_date"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="5dp"
+           android:layout_marginLeft="10dp"
+           android:text="Friday,October 7,2017"
+           android:textColor="@color/app_theme_text_color"
+           android:textSize="17sp" />
+
+       <com.rattletech.cityofontario.utilities.TextViewPlus
+           foo:customFont="OpenSans-CondBold.ttf"
+           android:id="@+id/find_more"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="5dp"
+           android:layout_marginLeft="10dp"
+           android:text="Found out more about this event"
+           android:textColor="@color/blue"
+           android:textStyle="bold"
+           android:textSize="14sp" />
    </LinearLayout>
 </RelativeLayout>

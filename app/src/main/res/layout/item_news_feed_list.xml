@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <com.rattletech.cityofontario.utilities.TextViewPlus
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toEndOf="@+id/img_logo"
+            android:text="Cityofontario"
+            android:textColor="@color/app_theme_text_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            foo:customFont="OpenSans-CondBold.ttf" />
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            foo:srcCompat="@drawable/calender"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <com.rattletech.cityofontario.utilities.TextViewPlus
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="2dp"
+            android:text="23-10-2017 10:20:PM"
+            android:textColor="@color/app_theme_text_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            foo:customFont="OpenSans-CondBold.ttf"
+            android:layout_alignBottom="@+id/title_text"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp" />
+
+
+
+    </RelativeLayout>
+    <com.rattletech.cityofontario.utilities.TextViewPlus
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="2dp"
+        android:text=" The @LungForce Walk - Ireland will be held on sunday November 5 at @Mathis Brother.For More info"
+        android:textColor="@color/app_theme_text_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        foo:customFont="OpenSans-CondBold.ttf"
+        android:layout_below="@+id/img_logo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.rattletech.cityofontario.utilities.TextViewPlus
+android:id="@+id/link_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="2dp"
+            android:text="Link:"
+            android:textColor="@color/app_theme_text_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            foo:customFont="OpenSans-CondBold.ttf"
+
+            android:layout_marginTop="14dp" />
+        <com.rattletech.cityofontario.utilities.TextViewPlus
+            android:id="@+id/text_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toRightOf="@+id/link_text"
+            android:layout_marginLeft="2dp"
+            android:text="https://www.google.com"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            foo:customFont="OpenSans-CondBold.ttf"
+
+            android:layout_marginTop="14dp" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/bgColor_overlay" />
+</LinearLayout>

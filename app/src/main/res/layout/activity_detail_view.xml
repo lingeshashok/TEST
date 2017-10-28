@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rattletech.cityofontario.DetailViewActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+
+        android:background="#EBEBF1"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="10dp"
+        app:titleTextColor="@android:color/black">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:gravity="center">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus xmlns:foo="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_back_icon"
+                    android:gravity="center"
+                    android:text="BACK"
+                    android:textColor="@color/app_theme_text_color"
+                    android:textSize="18sp"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/profile_imageview"
+                android:layout_width="140dp"
+                android:layout_height="58dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/app_logo"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="6dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/logout_imageview1"
+
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/beacon_new_selected"
+                    android:scaleType="fitCenter"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AAAAAA" />
+    <me.crosswall.lib.coverflow.core.PagerContainer
+        android:id="@+id/pager_container"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="?attr/colorPrimary">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/overlap_pager"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center" />
+
+
+    </me.crosswall.lib.coverflow.core.PagerContainer>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.rattletech.cityofontario.utilities.TextViewPlus xmlns:foo="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_marginRight="7dp"
+            android:text="Nugent's Park"
+            android:textColor="@color/app_theme_text_color"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            foo:customFont="OpenSans-CondBold.ttf" />
+
+        <com.rattletech.cityofontario.utilities.TextViewPlus xmlns:foo="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/web_link_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_marginRight="7dp"
+            android:text="200 S.Lemon Ave.,Ontario"
+            android:textColor="@color/app_theme_text_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            foo:customFont="OpenSans-CondBold.ttf" />
+
+    </LinearLayout>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

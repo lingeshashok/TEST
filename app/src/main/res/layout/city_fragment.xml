@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal"
+
+        android:id="@+id/top_layout">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_park"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentStart="true"
+
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/parks_selected" />
+
+            <com.rattletech.cityofontario.utilities.TextViewPlus xmlns:foo="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/text_park"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parks &amp; Facilities"
+
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+
+                foo:customFont="OpenSans-CondBold.ttf"
+                foo:textAllCaps="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_lib"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/library_normal" />
+
+            <com.rattletech.cityofontario.utilities.TextViewPlus xmlns:foo="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/text_lib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Library"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/app_theme_text_color"
+                foo:customFont="OpenSans-CondBold.ttf"
+                foo:textAllCaps="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/mid_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/bottom_layout"
+    android:layout_below="@+id/top_layout">
+    <GridView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/city_gridlayout"
+        />
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_find_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_rounded_image"
+                    android:text="Find a book"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_digital_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_rounded_image"
+                    android:text="Digital Books"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_events"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_rounded_image"
+                    android:text="Events"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_online_resources"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/button_rounded_image"
+                    android:text="Online Resources"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

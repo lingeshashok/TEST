@@ -15,6 +15,7 @@
 
 
     <com.rattletech.cityofontario.utilities.TextViewPlus
+        foo:customFont="OpenSans-CondBold.ttf"
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +27,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"
         android:textStyle="bold"
-        foo:customFont="Dosis-Bold.ttf" />
+      />
 
 
 

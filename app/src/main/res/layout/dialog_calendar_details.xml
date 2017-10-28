@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edittext_rounded_corner">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_theme_text_color">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/app_theme_text_color">
+
+        <Button
+            android:id="@+id/btn_report_issue"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/button_rounded_image"
+            android:text="Add Event To Calendar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/btn_report_issue"
+            android:layout_marginEnd="10dp"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/popclose"
+            android:background="@drawable/button_rounded_image"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/app_theme_text_color">
+
+        <com.rattletech.cityofontario.utilities.TextViewPlus
+
+            android:id="@+id/web_link_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="MUN - Home Work Helper"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            foo:customFont="OpenSans-CondBold.ttf" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dip"
+            android:paddingBottom="10dip"
+            android:paddingLeft="1dip"
+            android:paddingRight="1dip"
+            android:background="@drawable/webview_rounded_corner"
+            >
+            <WebView
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/app_theme_text_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="Event Date"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="7dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="2017-10-23"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="Start Time"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="7dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="2:30PM"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="EndTime"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="7dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="4:30 PM"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="Category Name"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="7dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="Anthony Munoz Community Center"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="Location"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="7dp"
+                    android:text=":"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4">
+
+                <com.rattletech.cityofontario.utilities.TextViewPlus
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+
+                    android:text="Aunthony Munoz Community Center,1024 West Fourth Street,California"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    foo:customFont="OpenSans-CondBold.ttf" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

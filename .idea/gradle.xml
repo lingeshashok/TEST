@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/SpinnerPickerView" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/coverflow" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

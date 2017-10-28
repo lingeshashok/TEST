@@ -3,12 +3,12 @@
     <string name="title_home">Home</string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="menu_rooms">Groups</string>
-    <string name="calendar">Calendar</string>
+    <string name="calender">Calender</string>
     <string name="menu_rule">Rules</string>
     <string name="my_city">My City</string>
     <string name="news">News</string>
     <string name="contact_us">Contact Us</string>
-    <string name="next">Next>></string>
+    <string name="next">Next</string>
     <string name="menu_paired_devices">Paired Devices</string>
     <string name="str_loading_please_wait">Loading...</string>
     <string name="str_loggin_please_wait">Logging in. Please wait.</string>

@@ -4,27 +4,18 @@
     package="com.rattletech.cityofontario">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <uses-feature android:name="android.hardware.location.gps" />
-
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="true" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name=".utilities.CityOfOntarioApp"
+        android:name=".utilities.IntelApp"
         android:allowBackup="false"
         android:configChanges="orientation"
         android:icon="@mipmap/ic_launcher"
@@ -39,6 +30,18 @@
             android:hardwareAccelerated="false"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
+
+        <service android:name=".fcm.FireBaseRecieveToken">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.PushFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
@@ -57,27 +60,7 @@
         <activity
             android:name=".ReportIssueActivity"
             android:label="@string/title_activity_report_issue"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".DetailViewActivity" />
-        <activity android:name=".WebviewActivity" />
-        <activity android:name=".NearbyBeaconActivity" />
-
-        <receiver android:name=".services.BackgroundReceiver" />
-
-        <service
-            android:name=".services.AltBeaconService"
-            android:enabled="true" />
-        <service
-            android:name="org.altbeacon.beacon.service.BeaconService"
-            android:enabled="true"
-            android:exported="false"
-            android:isolatedProcess="false"
-            android:label="beacon" />
-        <service
-            android:name="org.altbeacon.beacon.BeaconIntentProcessor"
-            android:enabled="true" />
-
-        <activity android:name=".RoomsDetailsActivity"></activity>
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

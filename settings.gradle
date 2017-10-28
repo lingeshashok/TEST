@@ -1,1 +1,1 @@
-include ':app', ':SpinnerPickerView', ':coverflow'
+include ':app', ':SpinnerPickerView'

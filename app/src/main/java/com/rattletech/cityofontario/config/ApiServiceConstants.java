@@ -105,9 +105,8 @@ public class ApiServiceConstants {
 
     /* Typeface setup */
 
-
-    public static final String strFontBold="OpenSans-CondBold.ttf";
     public static final String strFontMedium="Dosis-Medium.ttf";
+    public static final String strFontBold="Dosis-Bold.ttf";
     public static final String strFontRegular="Dosis-Regular.ttf";
     public static final String strFontLight="Dosis-Light.ttf";
     public static final String strFontExtraBold="Dosis-ExtraBold.ttf";
@@ -136,9 +135,13 @@ public class ApiServiceConstants {
         if(type.equals("bold")) {
             typeface = Typeface.createFromAsset(context.getResources().getAssets(), strFontBold);
         }else if(type.equals("regular")){
+            typeface = Typeface.createFromAsset(context.getResources().getAssets(), strFontRegular);
         }else if(type.equals("light")){
+            typeface = Typeface.createFromAsset(context.getResources().getAssets(), strFontLight);
         }else if(type.equals("extra_bold")){
+            typeface = Typeface.createFromAsset(context.getResources().getAssets(), strFontExtraBold);
         }else if(type.equals("medium")){
+            typeface = Typeface.createFromAsset(context.getResources().getAssets(), strFontMedium);
         }
 
         return typeface;

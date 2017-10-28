@@ -8,5 +8,5 @@ import org.json.JSONObject;
 
 public interface CallbackServiceInterface {
     void callbackObjectCall(JSONObject object);
-
+    void callbackDeleteCall(JSONObject object,int position);
 }

@@ -59,7 +59,7 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:id="@+id/nearby_beacon_imageview"
+                    android:id="@+id/logout_imageview1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@drawable/beacon_new_selected"
@@ -95,8 +95,6 @@
             app:itemIconTint="@color/white"
             app:itemTextColor="@drawable/bottom_nav_title_color"
             app:menu="@menu/navigation"
-            android:animateLayoutChanges="false"
-
 
             />
     </RelativeLayout>

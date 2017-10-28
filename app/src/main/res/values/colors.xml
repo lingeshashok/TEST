@@ -12,9 +12,9 @@
     <color name="red">#CC0000</color>
     <color name="grey">#c7c7c7</color>
     <color name="grey_title_background">#e2e2e2</color>
-    <color name="blue">#2d91f5</color>
+    <color name="selected_property_color">#77B0DB</color>
+
     <color name="app_theme_text_color">#0E67A2</color>
-    <color name="actionbar_background">#EBEBF1</color>
 
 
     <color name="colorControlHighlight">@color/fifty_percent_transparency_grey_400</color>

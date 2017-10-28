@@ -35,6 +35,8 @@ public class ServiceFunctions {
     CallbackServiceInterface callbackServiceInterface;
 
 
+    String commonLocalUrl = "http://" + ApiServiceConstants.SERVICE_HOSTIP + ":" + ApiServiceConstants.SERVICE_HOSTPORT + "/";
+
     AppPreferences pref;
     ProgressDialog progressDialog = null;
 
@@ -44,24 +46,30 @@ public class ServiceFunctions {
         pref = new AppPreferences(context);
 
     }
-    public void serviceCallGET(final String url) {
+    public void serviceCallPOST(final String urlMethodName, JSONObject object) {
 
-        String finalUrl = url;
+        String finalUrl = "";
+        boolean gatewayFlag = true;
+        commonLocalUrl = "http://" + pref.getLocalHostUrl() + "/";
+
+
+            finalUrl = commonLocalUrl + urlMethodName;
+
+
+
                 try {
-
                     progressDialog = new ProgressDialog(context);
                     progressDialog.setIndeterminate(true);
                     progressDialog.setMessage(context.getString(R.string.str_loading_please_wait));
                     progressDialog.setCancelable(false);
                     progressDialog.show();
-
                 }catch (Exception e){
                     e.printStackTrace();
                 }
 
-            JSONObject object = new JSONObject();
+
             final ProgressDialog finalProgressDialog = progressDialog;
-            final JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET, finalUrl,object,
+            final JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST, finalUrl, object,
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
@@ -69,7 +77,7 @@ public class ServiceFunctions {
 
                             callbackServiceInterface.callbackObjectCall(response);
 
-                            finalProgressDialog.dismiss();
+                                    finalProgressDialog.dismiss();
 
 
                         }
@@ -93,7 +101,14 @@ public class ServiceFunctions {
                 }
 
 
-            });
+            }){
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String>  params = new HashMap<String, String>();
+                    params.put("x-api-key", "rRw4jp5GM83TeNyIcWhhN3n4AeraZ0bRarM2hr4W");
+                    return params;
+                }
+            };
             RequestQueue requestQueue = Volley.newRequestQueue(context);
             jsonObjReq.setRetryPolicy(new DefaultRetryPolicy(50 * 1000, 1, 1.0f));
             requestQueue.add(jsonObjReq);
